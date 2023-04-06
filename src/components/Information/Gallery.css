@@ -1,0 +1,12 @@
+.imageStyle {
+    width: 400px;
+    max-width: 100%;
+    height: 340px;
+    object-fit: cover;
+    transition: 1.2s;
+    transform: scale(1);
+}
+
+.imageStyle:hover {
+    transform: scale(1.05);
+}
