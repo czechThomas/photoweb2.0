@@ -7,7 +7,6 @@ import ButtonGoup from '../components/Information/ButtonGoup';
 import Miminka from '../pages/Miminka';
 import Svatby from '../pages/Svatby';
 import Deti from '../pages/Deti';
-import Rodinky from '../pages/Rodiny';
 import { styleBox } from '../CustomStyles';
 
 
@@ -28,21 +27,19 @@ const Info = ({ windowSize }) => {
           Jediná fotografie, které budete litovat je ta, kterou nemáte!       
         </Box>
         <ButtonGoup type={type} setType={setSearchParams} windowSize={windowSize} />
-        <GalleryBox type={type} />
         {(() => {
         switch (type) {
           case 'svatby':
             return <Svatby />;
           case 'miminka':
             return <Miminka />;
-          case 'deti':
+          case 'detiarodinky':
             return <Deti />;
-          case 'rodinky':
-            return <Rodinky />;
           default:
             return <Svatby />;
         }
       })()}
+      <GalleryBox type={type} />
       </Box>
     </>
   );

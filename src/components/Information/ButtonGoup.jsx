@@ -19,17 +19,14 @@ const ButtonGoup = ({ windowSize, type, setType }) => {
           aria-label="Photo info button group"
           sx={{ width: windowSize >= 600 ? 'auto' : '350px' }}
         >
-          <SingleMenuButton linkPath="?type=svatby" isActive={type === 'svatby'}>
+          <SingleMenuButton linkPath="?type=svatby" isActive={type === 'svatby'} type="svatby">
             Svatby
           </SingleMenuButton>
-          <SingleMenuButton linkPath="?type=miminka" isActive={type === 'miminka'}>
+          <SingleMenuButton linkPath="?type=miminka" isActive={type === 'miminka'} type="miminka">
             Miminka
           </SingleMenuButton>
-          <SingleMenuButton linkPath="?type=deti" isActive={type === 'deti'}>
-            Děti
-          </SingleMenuButton>
-          <SingleMenuButton linkPath="?type=rodinky" isActive={type === 'rodinky'}>
-            Rodinky
+          <SingleMenuButton linkPath="?type=detiarodinky" isActive={type === 'detiarodinky'} type="detiarodinky">
+            Děti a Rodinky
           </SingleMenuButton>
         </StyledButtonGroup>
       </Box>

@@ -9,7 +9,7 @@ const Svatby = () => {
         <MinorHeader minHeight="90px" title="Svatební fotografování"/>
         <PortfolioBox sx={{ flexDirection: 'row-reverse', paddingBottom: '50px' }}>
             <Box sx={{ width: '500px' }}>
-                <img alt="jmeno" src="/images/svatba/142.jpg" style={{ width: '100%', height: '500px', objectFit: 'cover' }}/>
+                <img alt="jmeno" src="/images/svatba/142.jpg" style={{ width: '100%', height: '500px', objectFit: 'contain' }}/>
             </Box>
             <Box sx={{ width: '500px', textAlign: 'center' }}>
                 <Typography variant='body1' sx={{ paddingTop: '15px' }}>

@@ -24,25 +24,29 @@ const HomePage = () => {
       <Box sx={styleBox35padding}>
         <PortfolioItem 
           direction="" 
-          name="svatby" 
+          name="svatby"
+          type="svatby"
           image="/images/svatba/svatba_uvod_fit.jpg" 
           text={text.svatby}
         />
         <PortfolioItem 
           direction="row-reverse" 
-          name="miminka" 
+          name="miminka"
+          type="miminka"
           image="/images/babies/miminka_uvod.jpg" 
           text={text.miminka}
         />
         <PortfolioItem 
           direction="" 
-          name="děti" 
+          name="děti"
+          type="detiarodinky"
           image="/images/kids/Deti_uvod.jpg" 
           text={text.deti}
         />
         <PortfolioItem 
           direction="row-reverse" 
-          name="rodinky" 
+          name="rodinky"
+          type="detiarodinky"
           image="/images/rodinky/rodinky_uvod.jpg" 
           text={text.rodinky}
         />

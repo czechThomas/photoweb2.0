@@ -260,7 +260,7 @@ export const miminka = [
   },
 ];
 
-export const deti = [
+export const detiarodinky = [
   {
     img: '/images/kids/DSC_6371.jpg',
     title: 'DSC_6371',
@@ -301,9 +301,6 @@ export const deti = [
     img: '/images/kids/DSC_9024.jpg',
     title: 'DSC_9024',
   },
-];
-
-export const rodinky = [
   {
     img: '/images/rodinky/DSC_0198.jpg',
     title: 'DSC_0198',

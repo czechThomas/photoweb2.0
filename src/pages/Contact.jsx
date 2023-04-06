@@ -39,10 +39,6 @@ const data = {
       </div>
     ),
   },
-  navigace: {
-    title: 'Jak se ke mě dostanete',
-    text: 'Najdete mě v Hradci Králové...',
-  },
   socialMedia: {
     title: 'Sociální sítě',
     text: (
@@ -67,7 +63,6 @@ const Contact = () => {
           <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: '70px', justifyContent: 'center', paddingBottom: '70px' }}>
               <ContactInfo title={data.adresa.title} text={data.adresa.text} />
               <ContactInfo title={data.kontakt.title} text={data.kontakt.text} />
-              <ContactInfo title={data.navigace.title} text={data.navigace.text} />
               <ContactInfo title={data.socialMedia.title} text={data.socialMedia.text} />
           </Box>
           <ContactForm />
@@ -93,12 +88,6 @@ const Contact = () => {
               <Button sx={{ color: Colors.hover }} onClick={() => setOpen(false)}>Souhlasím</Button>
             </DialogActions>
           </Dialog>
-          <Box sx={{ paddingTop: '30px' }} >
-            <Box sx={{ backgroundColor: Colors.light , color: Colors.secondary , padding: '10px', marginBottom: '-40px' }}>
-              <Typography sx={{ textTransform: 'uppercase' }} variant='h5'>Orientační mapa</Typography>
-            </Box>
-            <iframe title='Location' style={{ border: 'none', padding: '50px 0' }} src="https://frame.mapy.cz/s/keducahosu" width="100%" height="500" />
-          </Box>
         </Box>
     );
 };

@@ -23,15 +23,10 @@ const Gallery = ({ type }) => {
       '/images/babies/DSC_0760-Edit.jpg',
       '/images/babies/DSC_0030.jpg',
     ],
-    deti: [
+    detiarodinky: [
       '/images/kids/DSC_6371.jpg',
       '/images/kids/DSC_8461.jpg',
       '/images/kids/DSC_8773_cb.jpg',
-    ],
-    rodinky: [
-      '/images/rodinky/DSC_1552.jpg',
-      '/images/rodinky/DSC_6781-Edit 2.jpg',
-      '/images/rodinky/DSC_3235-Edit.jpg',
     ],
   };
   

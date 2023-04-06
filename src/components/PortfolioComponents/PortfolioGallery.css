@@ -1,7 +1,7 @@
 .single img {
     width: 400px;
     height: 400px;
-    object-fit: cover;
+    object-fit: contain;
     max-width: 100%;
     transition: 0.7s;
 }

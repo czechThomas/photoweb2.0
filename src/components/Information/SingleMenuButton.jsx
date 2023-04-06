@@ -11,14 +11,12 @@ const StyledButton = styled(Button)({
   },
 });
 
-const SingleMenuButton = ({ children, isActive }) => {
-  const child = children;
-  const route = child.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+const SingleMenuButton = ({ children, isActive, type}) => {
   return (
     <Box>
       <StyledButton
         LinkComponent={Link}
-        to={{ search: `?type=${route}` }}
+        to={{ search: `?type=${type}` }}
         sx={{ backgroundColor: isActive ? '#E1B653' : 'white' }}
       >
         {children}

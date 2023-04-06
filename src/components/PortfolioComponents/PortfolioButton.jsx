@@ -17,10 +17,11 @@ const PortfolioButton = ({ windowSize, image, title, path }) => {
   const navigate = useNavigate();
 
   const ImageButton = styled(Button)({
-    width: '100%',
+    width: '270px',
     height: '400px',
     backgroundImage: `url(/images/${image})`,
-    backgroundSize: 'cover',
+    backgroundSize: 'contain',
+    backgroundRepeat: 'no-repeat',
     filter: 'grayscale(100%)',
     '&:hover': {
         filter: 'none',

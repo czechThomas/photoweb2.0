@@ -1,6 +1,6 @@
 import { Box } from '@mui/material';
 import PortfolioGallery from '../components/PortfolioComponents/PortfolioGallery';
-import{ svatby, miminka, deti, rodinky, tehotenske } from '../components/PortfolioComponents/GalleryData';
+import{ svatby, miminka, detiarodinky, tehotenske } from '../components/PortfolioComponents/GalleryData';
 import { stylePortfolioBox } from '../CustomStyles';
 import { useNavigate, useParams } from 'react-router-dom';
 
@@ -17,10 +17,8 @@ const Portfolio = () => {
                     return <PortfolioGallery itemData={svatby}/>;
                 case 'miminka':
                     return <PortfolioGallery itemData={miminka}/>;
-                case 'deti':
-                    return <PortfolioGallery itemData={deti}/>;
-                case 'rodinky':
-                    return <PortfolioGallery itemData={rodinky}/>;
+                case 'detiarodinky':
+                    return <PortfolioGallery itemData={detiarodinky}/>;
                 case 'tehotenske':
                     return <PortfolioGallery itemData={tehotenske}/>;
                 default:
