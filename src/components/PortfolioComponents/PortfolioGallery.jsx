@@ -17,7 +17,7 @@ const GalleryStyle = {
 const navigateIcon = {
   cursor: 'pointer',
   position: 'fixed',
-  zIndex: '9999',
+  zIndex: '992',
   color: 'white',
   fontSize: '3em',
 };
@@ -66,14 +66,16 @@ const PortfolioGallery = ({ itemData }) => {
   return (
     <>
       { openModal &&
-        <div className="sliderWrap">
-          <NavigateBeforeIcon sx={navigateIcon} onClick={prevImage} className="prevSlide" />
-          <NavigateNextIcon sx={navigateIcon} onClick={nextImage} className="nextSlide" />
-          <CloseIcon onClick={handleCloseModal} sx={navigateIcon} className="closeSlide" />
+        <>
+        <div className="sliderWrap" onClick={handleCloseModal}>
           <div className="fullScreenImage">
-            <img src={itemData[slideNumber].img} alt='' style={{ maxWidth: '800px', objectFit: 'contain'}}/>
+            <img src={itemData[slideNumber].img} alt=''/>
           </div>
-        </div> 
+        </div>
+        <NavigateBeforeIcon sx={navigateIcon} onClick={prevImage} className="prevSlide" />
+        <NavigateNextIcon sx={navigateIcon} onClick={nextImage} className="nextSlide" />
+        <CloseIcon onClick={handleCloseModal} sx={navigateIcon} className="closeSlide" />
+        </>
       }
       <Box sx={GalleryStyle}>
         {

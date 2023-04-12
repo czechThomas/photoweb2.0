@@ -71,9 +71,6 @@ const Miminka = () => {
             <br />
             Doba dodání se liší dle aktuální vytíženosti. Fotografie zasílám elektronicky.
           </Typography>
-          <PortfolioBox>
-              <img alt="jmeno" src="/images/babies/DSC_0803-Edit.jpg" style={{ width: '100%', height: '350px', objectFit: 'cover' }}/>
-          </PortfolioBox>
           <PortfolioButton variant='contained' href='/kontakt'>
               Chci fotografie
           </PortfolioButton>
