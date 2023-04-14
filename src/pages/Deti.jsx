@@ -1,13 +1,11 @@
 import { Box, Typography } from '@mui/material';
 import { PortfolioButton, PortfolioBox, styleBox35padding } from '../CustomStyles';
-import MinorHeader from '../components/Header/MinorHeader';
 
 
 const Deti = () => {
   return (
     <>
       <Box sx={styleBox35padding}>
-        <MinorHeader minHeight="90px" title="fotografování dětí"/>
         <PortfolioBox sx={{ flexDirection: 'row-reverse', paddingBottom: '50px' }}>
             <Box sx={{ width: '500px' }}>
                 <img alt="jmeno" src="/images/kids/DSC_6486.jpg" style={{ width: '100%', height: '500px', objectFit: 'contain' }}/>
@@ -18,9 +16,6 @@ const Deti = () => {
                   <br />
                   Při venkovním rodinném focení je samozřejmostí i focení s domácími mazlíčky.
                 </Typography>
-                <PortfolioButton variant='contained' href="/kontakt">
-                    Chci fotografie
-                </PortfolioButton>
             </Box>
         </PortfolioBox>
         <Box>
@@ -70,6 +65,9 @@ const Deti = () => {
             <br />
             Doba dodání se liší dle aktuální vytíženosti. Fotografie zasílám elektronicky.
           </Typography>
+          <PortfolioButton variant='contained' href='/kontakt'>
+              Kontakt
+          </PortfolioButton>
         </Box>
       </Box>
     </>

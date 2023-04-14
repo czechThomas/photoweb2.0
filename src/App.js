@@ -25,12 +25,8 @@ const arrowUp = {
 };
 
 export default function App() {
-  const [windowSize, setWindowSize] = useState(window.innerWidth);
   const [showTop, setShowTop] = useState(false);
 
-  const handleResize = () => {
-    setWindowSize(window.innerWidth)
-  };
 
   const handleScroll = () => {
     if (window.scrollY > 100) {
@@ -41,13 +37,6 @@ export default function App() {
   };
 
   useEffect(() => {
-    window.addEventListener('resize', handleResize)
-    return () => {
-      window.removeEventListener('resize', handleResize)
-    }
-  }, []);
-
-  useEffect(() => {
     window.addEventListener('scroll', handleScroll)
     return () => {
       window.removeEventListener('scroll', handleScroll)
@@ -56,13 +45,13 @@ export default function App() {
 
   return (
     <>
-      <Navbar windowSize={windowSize} id="top" />
+      <Navbar id="top" />
       <Routes>
         <Route index path="/" element={<HomePage />}/>
-        <Route path="/portfolio" element={<Portfolio windowSize={windowSize} />}/>
+        <Route path="/portfolio" element={<Portfolio />}/>
         <Route path="/portfolio/gallery" element={<Gallery />} />
         <Route path="/portfolio/gallery/:id" element={<Gallery />} />
-        <Route path="/informace" element={<Info windowSize={windowSize} />}/>
+        <Route path="/informace" element={<Info />}/>
         <Route path="/cenik" element={<PriceList />}/>
         <Route path="/kontakt" element={<Contact />}/>
         <Route path="/terms" element={<TermsAndConditions />}/>

@@ -1,5 +1,6 @@
 import { ButtonGroup, Box, styled } from '@mui/material';
 import SingleMenuButton from './SingleMenuButton';
+import { useWindow } from '../../Context';
 
 const StyledButtonGroup = styled(ButtonGroup)({
   backgroundColor: 'white',
@@ -8,7 +9,8 @@ const StyledButtonGroup = styled(ButtonGroup)({
   },
 });
 
-const ButtonGoup = ({ windowSize, type, setType }) => {
+const ButtonGoup = ({ type, setType }) => {
+  const { windowSize } = useWindow();
 
   return (
     <>

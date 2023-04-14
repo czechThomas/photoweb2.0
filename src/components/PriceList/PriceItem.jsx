@@ -18,7 +18,7 @@ const PriceItem = ({ title, text, price }) => {
           {text}
         </Box>
         <Box sx={{ padding: '1px', backgroundColor: Colors.light, minHeight: '120px' }}>
-          <h3>{price}</h3>
+          {price}
         </Box>
       </Box>
     </Box>

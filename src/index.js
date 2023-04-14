@@ -4,14 +4,34 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
+import { WindowProvider } from './Context';
+import { createTheme, ThemeProvider } from '@mui/material';
+
+const theme = createTheme({
+  components: {
+    MuiInput: {
+      styleOverrides: {
+        root: {
+          '&::after': {
+            borderBottom: '2px solid #E1B653',
+          }
+        },
+      },
+    },
+  },
+})
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <ThemeProvider theme={theme}>
+      <WindowProvider>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </WindowProvider>
+    </ThemeProvider>
   </React.StrictMode>
 );
 

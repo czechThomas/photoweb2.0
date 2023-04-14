@@ -42,7 +42,7 @@ const Footer = () => {
                 </WaveBox>
                 <Box sx={{ color: 'white', textAlign: 'center' }}>
                     <Typography variant='body1'>
-                        Mou práci a další fotografie můžete sledovat na Instagramu nebo Facebooku.
+                        Buďme v kontaktu, sledujte mě na Instagramu nebo Facebooku
                     </Typography>
                     <IconButton aria-label="Facebook" onClick={() => window.open('https://www.facebook.com/fotofojtova')} sx={{ color: 'white'}}>
                         <FacebookIcon fontSize="large" />
@@ -50,7 +50,7 @@ const Footer = () => {
                     <IconButton aria-label="Instagram" onClick={() => window.open('https://www.instagram.com/lucie_fojtova__fotografka')} sx={{ color: 'white'}}>
                         <InstagramIcon fontSize="large" />
                     </IconButton>
-                    <Typography sx={{ color: 'grey', padding: '10px' }}>Foltynova photographer / 2023</Typography>
+                    <Typography sx={{ color: 'grey', padding: '10px' }}>Lucie Fojtová / 2023</Typography>
                     <Link style={{ color: '#FFFFFF' }} to="/terms">Obchodní podmínky</Link>
                 </Box>
             </FooterBox>

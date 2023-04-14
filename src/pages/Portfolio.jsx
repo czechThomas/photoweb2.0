@@ -4,24 +4,26 @@ import PortfolioButton from '../components/PortfolioComponents/PortfolioButton';
 import { stylePortfolioBox } from '../CustomStyles';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import { useWindow } from '../Context';
 
-const Portfolio = ({ windowSize }) => {
+const Portfolio = () => {
+  const { windowSize } = useWindow();
     return(
         <>
           <Box sx={{...stylePortfolioBox, maxWidth: windowSize >= 1050 ? '1100px' : '80%'}}>
             <MinorHeader minHeight="90px" title="Portfolio"/>
             <Grid container spacing={1} direction={windowSize >= 1050 ? 'row' : 'column'}>
               <Grid item xs={3}>
-                <PortfolioButton windowSize={windowSize} image="svatba/svatba_uvod_fit.jpg" title="svatby" path="/portfolio/gallery/svatby"/>
+                <PortfolioButton image="svatba/svatba_uvod_fit.jpg" title="svatby" path="/portfolio/gallery/svatby"/>
               </Grid>
               <Grid item xs={3}>
-                <PortfolioButton windowSize={windowSize} image="babies/miminka_uvod.jpg" title="miminka" path="/portfolio/gallery/miminka"/>
+                <PortfolioButton image="babies/miminka_uvod.jpg" title="miminka" path="/portfolio/gallery/miminka"/>
               </Grid>
               <Grid item xs={3}>
-                <PortfolioButton windowSize={windowSize} image="kids/Deti_uvod.jpg" title="děti a rodinky" path="/portfolio/gallery/detiarodinky"/>
+                <PortfolioButton image="kids/Deti_uvod.jpg" title="děti a rodinky" path="/portfolio/gallery/detiarodinky"/>
               </Grid>
               <Grid item xs={3}>
-                <PortfolioButton windowSize={windowSize} image="pregnant/DSC_3512-Edit_fit.jpg" title="těhotenské focení" path="/portfolio/gallery/tehotenske"/>
+                <PortfolioButton image="pregnant/DSC_3512-Edit_fit.jpg" title="těhotenské focení" path="/portfolio/gallery/tehotenske"/>
               </Grid>
             </Grid>
           </Box>

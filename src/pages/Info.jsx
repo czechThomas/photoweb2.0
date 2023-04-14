@@ -1,7 +1,6 @@
 import { Box } from '@mui/material';
 import { useEffect } from 'react';
 import { useSearchParams, useLocation } from 'react-router-dom';
-import MinorHeader from '../components/Header/MinorHeader';
 import GalleryBox from '../components/Information/Gallery';
 import ButtonGoup from '../components/Information/ButtonGoup';
 import Miminka from '../pages/Miminka';
@@ -10,7 +9,7 @@ import Deti from '../pages/Deti';
 import { styleBox } from '../CustomStyles';
 
 
-const Info = ({ windowSize }) => {
+const Info = () => {
   const [searchParams, setSearchParams] = useSearchParams({ type: 'svatby' });
   const type = searchParams.get('type');
   const { search } = useLocation();
@@ -22,11 +21,7 @@ const Info = ({ windowSize }) => {
   return(
     <>
       <Box sx={styleBox}>
-        <MinorHeader minHeight="90px" title="Informace o focení"/>
-        <Box>
-          Jediná fotografie, které budete litovat je ta, kterou nemáte!       
-        </Box>
-        <ButtonGoup type={type} setType={setSearchParams} windowSize={windowSize} />
+        <ButtonGoup type={type} setType={setSearchParams} />
         {(() => {
         switch (type) {
           case 'svatby':

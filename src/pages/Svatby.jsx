@@ -1,12 +1,10 @@
 import { Box, Typography } from '@mui/material';
 import { PortfolioButton, PortfolioBox, styleBox35padding } from '../CustomStyles';
-import MinorHeader from '../components/Header/MinorHeader';
 
 const Svatby = () => {
   return (
     <>
       <Box sx={styleBox35padding}>
-        <MinorHeader minHeight="90px" title="Svatební fotografování"/>
         <PortfolioBox sx={{ flexDirection: 'row-reverse', paddingBottom: '50px' }}>
             <Box sx={{ width: '500px' }}>
                 <img alt="jmeno" src="/images/svatba/183.jpg" style={{ width: '100%', height: '500px', objectFit: 'contain' }}/>
@@ -21,9 +19,6 @@ const Svatby = () => {
                   <br />
                   Svatební focení začíná na částce 13.900,- 
                 </Typography>
-                <PortfolioButton variant='contained' href="/kontakt">
-                  Chci fotografie
-                </PortfolioButton>
             </Box>
         </PortfolioBox>
         <Box>
@@ -45,7 +40,7 @@ const Svatby = () => {
           <br />
           </Typography>
           <PortfolioButton variant='contained' href='/kontakt'>
-              Chci fotografie
+              Kontakt
           </PortfolioButton>
         </Box>
       </Box>

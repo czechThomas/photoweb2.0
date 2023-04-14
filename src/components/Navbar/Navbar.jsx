@@ -5,9 +5,11 @@ import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Box } from '@mui/material';
 import HamburgerMenu from './HamburgerMenu';
+import { useWindow } from '../../Context';
 
-const Navbar = ({ windowSize }) => {
+const Navbar = () => {
   const [toggleMenu, settoggleMenu] = useState(true);
+  const { windowSize } = useWindow();
 
   const handleChange = () => {
     settoggleMenu(!toggleMenu);
@@ -41,7 +43,7 @@ const Navbar = ({ windowSize }) => {
           )
         }
       </NavBox>
-      <HamburgerMenu toggle={toggleMenu} windowSize={windowSize} onClickChange={handleChange} />
+      <HamburgerMenu toggle={toggleMenu} onClickChange={handleChange} />
     </> 
   );
 };

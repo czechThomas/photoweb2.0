@@ -1,13 +1,11 @@
 import { Box, Typography } from '@mui/material';
 import { PortfolioButton, PortfolioBox, styleBox35padding } from '../CustomStyles';
-import MinorHeader from '../components/Header/MinorHeader';
 
 
 const Miminka = () => {
   return (
     <>
       <Box sx={styleBox35padding}>
-        <MinorHeader minHeight="90px" title="Fotografování miminek"/>
         <PortfolioBox sx={{ flexDirection: 'row-reverse', paddingBottom: '50px' }}>
             <Box sx={{ width: '500px' }}>
                 <img alt="jmeno" src="/images/babies/DSC_0091.jpg" style={{ width: '100%', height: '500px', objectFit: 'contain' }}/>
@@ -18,9 +16,6 @@ const Miminka = () => {
                   <br />
                   Novorozenecké fotky fotím mezi 5. a 14. dnem od narození.
                 </Typography>
-                <PortfolioButton variant='contained' href='/kontakt'>
-                    Chci fotografie
-                </PortfolioButton>
             </Box>
         </PortfolioBox>
         <Box>
@@ -72,7 +67,7 @@ const Miminka = () => {
             Doba dodání se liší dle aktuální vytíženosti. Fotografie zasílám elektronicky.
           </Typography>
           <PortfolioButton variant='contained' href='/kontakt'>
-              Chci fotografie
+              Kontakt
           </PortfolioButton>
         </Box>
       </Box>

@@ -1,6 +1,7 @@
 import { Button, styled, Typography } from '@mui/material';
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
+import { useWindow } from '../../Context';
 
 
 
@@ -12,7 +13,8 @@ const PortfolioTypography = styled(Typography)({
     color: 'white',
 })
 
-const PortfolioButton = ({ windowSize, image, title, path }) => {
+const PortfolioButton = ({ image, title, path }) => {
+  const { windowSize } = useWindow();
   const [hover, setHover] = useState(false);
   const navigate = useNavigate();
 

@@ -22,17 +22,16 @@ import { Colors, PortfolioButton } from '../CustomStyles';
 const data = {
   adresa: {
     title: 'Adresa ateliéru',
-    text: 'Hradec Králové, 500 12',
+    text: 'Fotíme v Pardubicích nebo Hradci Králové',
   },
   kontakt: {
     title: 'Kontakt',
     text: (
       <div>
-        <h2>Lucie Fojtová</h2>
+        Lucie Fojtová
+      <br />
+      <br />
         IČO: 14032708
-      <br />
-      <br />
-        tel: +420 777 816 899
       <br />
       <br />
         luci.fojtova@seznam.cz
@@ -40,14 +39,14 @@ const data = {
     ),
   },
   socialMedia: {
-    title: 'Sociální sítě',
+    title: 'Buďme v kontaktu',
     text: (
       <div>
         <IconButton aria-label="Facebook" onClick={() => window.open('https://www.facebook.com/fotofojtova')} sx={{ color: Colors.dark }}>
-            <FacebookIcon fontSize="large" />
+            <FacebookIcon sx={{ fontSize: '60px' }} />
         </IconButton>
         <IconButton aria-label="Instagram" onClick={() => window.open('https://www.instagram.com/lucie_fojtova__fotografka')} sx={{ color: Colors.dark }}>
-            <InstagramIcon fontSize="large" />
+            <InstagramIcon sx={{ fontSize: '60px' }}  />
         </IconButton>
       </div>
 ),

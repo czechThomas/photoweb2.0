@@ -10,7 +10,7 @@ const text = {
   svatby: 
     'Velmi ráda se stanu součástí Vašeho neopakovatelného příběhu. Zaujala Vás moje práce? Koukněte do portfolia a v případě zájmu mě kontaktujte. Ke každé svatbě přistupuji individuálně!',
   miminka: 
-    'Miminka fotím do 14 dnů od jejich narození. Focení probíhá z pohodlí Vašeho domova. Zda vyberete stylizované fotografie nebo přirozené tzv. Lifestyle, nechám na Vás. Více naleznete v sekci "informace"',
+    'Miminka fotím ideálně do 14 dnů od jejich narození. Focení probíhá z pohodlí Vašeho domova, nebo ve specializovaném ateliéru v Pardubicích nebo Hradci Králové. Zda vyberete stylizované fotografie nebo přirozené tzv. Lifestyle, nechám na Vás.',
   deti: 'Focení dětí je ideální od věku cca 4 měsíců, kdy už vydrží na bříšku, až do dospělosti. Každé období má své kouzlo.',
   rodinky: 'Tady platí dvakrát tolik, že jediná fotka, které budete litovat je ta, kterou nemáte! Na rodinné focení je vhodná doba úplně vždy. Přijít můžete s celou rodinkou, sourozencem nebo třeba s babičkou.',
 }

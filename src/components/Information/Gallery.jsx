@@ -12,6 +12,7 @@ const GalleryBox = styled(Box)({
   })  
 
 const Gallery = ({ type }) => {
+
   const pictureData = {
     svatby: [
       '/images/svatba/DSC_4128-Edit.jpg',
@@ -40,7 +41,7 @@ const Gallery = ({ type }) => {
         }
       </GalleryBox>
       <PortfolioButton variant='contained' href={`/portfolio/gallery/${type}`}>
-        Chci vidět více fotek
+        Galerie
       </PortfolioButton>
     </>
   )

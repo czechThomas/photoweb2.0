@@ -27,7 +27,7 @@ const ContactForm = () => {
 
     const sendEmail = (e) => {
         e.preventDefault();
-        emailjs.sendForm('service_8hgpaeg', 'template_7g06df7', form.current, 'wBwLhMg24QBp3IbkY')
+        emailjs.sendForm('service_ef42p3o', 'template_a84s1ei', form.current, '2nzyDM9_tFJLoxxXf')
         .then((result) => {
             console.log(result.text);
             setName('');
@@ -82,7 +82,7 @@ const ContactForm = () => {
                     rows={8}
                     required
                 />
-                <InputButton type="submit" value="Odeslat zprávu"/>
+                <InputButton type="submit" value="Odeslat zprávu" />
             </Box>
         </form>
     );

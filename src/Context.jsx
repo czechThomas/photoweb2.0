@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useContext, useState, useEffect, useMemo } from 'react';
 
 const WindowContext = createContext();
 
@@ -20,5 +20,11 @@ export const WindowProvider = ({ children }) => {
       }
     }, []);
 
-  return <WindowContext.Provider value={windowSize}>{children}</WindowContext.Provider>;
+    const value = useMemo(() => {
+      return {
+        windowSize
+      };
+    }, [windowSize]);
+
+  return <WindowContext.Provider value={value}>{children}</WindowContext.Provider>;
 };
