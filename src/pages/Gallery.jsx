@@ -1,8 +1,13 @@
-import { Box } from '@mui/material';
+import { Box, styled } from '@mui/material';
 import PortfolioGallery from '../components/PortfolioComponents/PortfolioGallery';
-import{ svatby, miminka, detiarodinky, tehotenske } from '../components/PortfolioComponents/GalleryData';
-import { stylePortfolioBox } from '../CustomStyles';
+import{ wedding, babies, kidsAndFamily, pregnant } from '../components/PortfolioComponents/GalleryData';
 import { useNavigate, useParams } from 'react-router-dom';
+
+const PortfolioBox = styled(Box)({
+    paddingTop: '125px',
+    margin: '0 auto',
+    textAlign: 'center',
+});
 
 const Portfolio = () => {
     const params = useParams();
@@ -10,17 +15,17 @@ const Portfolio = () => {
 
     return(
         <>
-          <Box sx={stylePortfolioBox}>
+          <PortfolioBox>
             {(() => {
                 switch (params.id) {
                 case 'svatby':
-                    return <PortfolioGallery itemData={svatby}/>;
+                    return <PortfolioGallery itemData={wedding}/>;
                 case 'miminka':
-                    return <PortfolioGallery itemData={miminka}/>;
+                    return <PortfolioGallery itemData={babies}/>;
                 case 'detiarodinky':
-                    return <PortfolioGallery itemData={detiarodinky}/>;
+                    return <PortfolioGallery itemData={kidsAndFamily}/>;
                 case 'tehotenske':
-                    return <PortfolioGallery itemData={tehotenske}/>;
+                    return <PortfolioGallery itemData={pregnant}/>;
                 default:
                     return (
                         <>
@@ -31,7 +36,7 @@ const Portfolio = () => {
                     );
                 }
             })()}  
-          </Box>
+          </PortfolioBox>
         </>
     );
 };

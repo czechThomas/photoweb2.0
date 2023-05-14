@@ -1,4 +1,16 @@
-import { NavLink } from '../../CustomStyles';
+import { Link, styled } from '@mui/material';
+import { Colors, Fonts } from '../../CustomStyles';
+
+const NavLink = styled(Link)({
+    textDecoration: 'none',
+    cursor: 'pointer',
+    color: Colors.secondary,
+    fontSize: '1.3rem',
+    fontFamily: Fonts.secondary,
+    '&:hover': {
+      color: Colors.hover,
+    }
+});
 
 const ItemOfNav = () => {
     return(

@@ -1,6 +1,6 @@
 .single img {
     width: auto;
-    height: 400px;
+    height: 340px;
     object-fit: contain;
     max-width: 100%;
     transition: 0.7s;
@@ -26,6 +26,7 @@
     width: calc(100% - 40px);
     max-width: 1000px;
     height: auto;
+    max-height: calc(100vh - 40px);
 }
 
 .nextSlide {

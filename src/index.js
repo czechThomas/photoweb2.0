@@ -5,21 +5,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import { WindowProvider } from './Context';
-import { createTheme, ThemeProvider } from '@mui/material';
-
-const theme = createTheme({
-  components: {
-    MuiInput: {
-      styleOverrides: {
-        root: {
-          '&::after': {
-            borderBottom: '2px solid #E1B653',
-          }
-        },
-      },
-    },
-  },
-})
+import { ThemeProvider } from '@mui/material';
+import { theme } from './MuiTheme';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

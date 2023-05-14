@@ -1,7 +1,19 @@
-import { Box, Typography, Grid } from '@mui/material';
+import { Box, Button, Typography, Grid, styled } from '@mui/material';
 import MinorHeader from '../components/Header/MinorHeader';
 import PriceItem from '../components/PriceList/PriceItem';
-import { styleBox, PortfolioButton } from '../CustomStyles';
+
+const InfoBox = styled(Box)({
+  paddingTop: '125px',
+  maxWidth: '90%',
+  margin: '0 auto',
+  textAlign: 'center',
+  minHeight: '55vh',
+});
+
+const PortfolioButton = styled(Button)({
+  marginTop: '20px',
+  width: '250px',
+});
 
 const rodinkyAdeti = {
   text: (
@@ -58,7 +70,7 @@ const svatby = {
 const PriceList = () => {
   return(
     <>
-      <Box sx={styleBox}>
+      <InfoBox>
         <MinorHeader minHeight="40px"/>
         <Grid container justifyContent="center" >
           <Grid item>
@@ -83,7 +95,7 @@ const PriceList = () => {
         <PortfolioButton variant='contained' href="/kontakt">
             Napište mi
         </PortfolioButton>
-      </Box>
+      </InfoBox>
       <Box sx={{ height: '70px' }}/>
     </>
   );

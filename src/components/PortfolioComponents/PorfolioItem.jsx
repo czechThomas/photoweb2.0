@@ -1,6 +1,27 @@
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, Button, styled } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import { PortfolioTypography, PortfolioButton, PortfolioBox } from '../../CustomStyles';
+import { Colors } from '../../CustomStyles';
+
+const PortfolioButton = styled(Button)({
+    marginTop: '20px',
+    width: '250px',
+});
+
+const PortfolioTypography = styled(Typography)({
+    backgroundColor: Colors.light, 
+    padding: '10px', 
+    textTransform: 'uppercase',
+});
+
+const PortfolioBox = styled(Box)({
+    display: 'flex',
+    flexWrap: 'wrap',
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    gap: '20px',
+    padding: '10px 0px',
+});
 
 const PortfolioItem = ({ name, type, direction, image, text }) => {
     const navigate = useNavigate();

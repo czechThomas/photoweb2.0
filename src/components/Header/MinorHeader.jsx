@@ -1,5 +1,11 @@
-import { Typography, styled } from '@mui/material';
-import { HeaderBox } from '../../CustomStyles';
+import { Typography, Box, styled } from '@mui/material';
+
+const HeaderBox = styled(Box)({
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+    backgroundPosition: '35% 75%',
+    position: 'relative',  
+});
 
 const HeadTypography = styled(Typography)({
     fontStyle: 'oblique', 

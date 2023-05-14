@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
-import { Box, Input, styled } from '@mui/material';
+import { Box, Input, TextField, styled } from '@mui/material';
 import emailjs from '@emailjs/browser';
-import { FormTextField, Colors } from '../../CustomStyles';
+import { Colors } from '../../CustomStyles';
 
 const InputButton = styled(Input)({
     marginTop: '20px',
@@ -16,6 +16,28 @@ const InputButton = styled(Input)({
         backgroundColor: Colors.primary,
         transition: '0.7s',
     }
+});
+
+const FormTextField = styled(TextField)({
+    maxWidth: '600px',
+    '& label': {
+     color: Colors.secondary,
+    },
+    '& label.Mui-focused': {
+     color: Colors.hover,
+    },
+    '& .MuiOutlinedInput-root': {
+     backgroundColor: '#ffffff',
+    '& fieldset': {
+        borderColor: Colors.secondary,
+    },
+    '&:hover fieldset': {
+        borderColor: Colors.secondary,
+    },
+    '&.Mui-focused fieldset': {
+        borderColor: Colors.hover,
+    },
+    },
 });
 
 const ContactForm = () => {

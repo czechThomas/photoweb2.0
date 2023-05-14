@@ -12,6 +12,7 @@ import NotFound from './pages/NotFound';
 import TermsAndConditions from './pages/TermsAndConditions';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
+import Playground from './Playground';
 
 const arrowUp = {
   position: 'fixed',
@@ -55,6 +56,7 @@ export default function App() {
         <Route path="/cenik" element={<PriceList />}/>
         <Route path="/kontakt" element={<Contact />}/>
         <Route path="/terms" element={<TermsAndConditions />}/>
+        <Route path="/playground" element={<Playground />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

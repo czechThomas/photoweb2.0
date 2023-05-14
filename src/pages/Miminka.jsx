@@ -1,14 +1,36 @@
-import { Box, Typography } from '@mui/material';
-import { PortfolioButton, PortfolioBox, styleBox35padding } from '../CustomStyles';
+import { Box, Button, styled, Typography } from '@mui/material';
+
+const PortfolioButton = styled(Button)({
+  marginTop: '20px',
+  width: '250px',
+});
+
+const PortfolioBox = styled(Box)({
+  display: 'flex',
+  flexWrap: 'wrap',
+  flexDirection: 'row-reverse',
+  width: '100%',
+  justifyContent: 'center',
+  alignItems: 'center',
+  gap: '20px',
+  padding: '10px 0px 50px',
+});
+
+const Box35padding = styled(Box)({
+  paddingTop: '35px',
+  maxWidth: '90%',
+  margin: '0 auto',
+  textAlign: 'center',
+});
 
 
 const Miminka = () => {
   return (
     <>
-      <Box sx={styleBox35padding}>
-        <PortfolioBox sx={{ flexDirection: 'row-reverse', paddingBottom: '50px' }}>
+      <Box35padding>
+        <PortfolioBox>
             <Box sx={{ width: '500px' }}>
-                <img alt="jmeno" src="/images/babies/DSC_0091.jpg" style={{ width: '100%', height: '500px', objectFit: 'contain' }}/>
+                <img alt="jmeno" src="/images/babies/1.jpg" style={{ width: '100%', height: '340px', objectFit: 'contain' }}/>
             </Box>
             <Box sx={{ width: '500px', textAlign: 'center' }}>
                 <Typography variant='body1' sx={{ paddingTop: '15px' }}>
@@ -70,7 +92,7 @@ const Miminka = () => {
               Kontakt
           </PortfolioButton>
         </Box>
-      </Box>
+      </Box35padding>
     </>
   )
 }

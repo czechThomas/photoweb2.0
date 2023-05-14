@@ -8,16 +8,29 @@ import {
   DialogActions,
   DialogContent,
   DialogContentText,
+  styled,
 } from '@mui/material';
 import { useState } from 'react';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import MinorHeader from '../components/Header/MinorHeader';
-import { styleBox75width } from '../CustomStyles';
 import ContactForm from '../components/ContactForm/ContactForm';
 import ContactInfo from '../components/ContactForm/ContactInfo';
 import TaCText from '../components/ContactForm/TaCText';
-import { Colors, PortfolioButton } from '../CustomStyles';
+import { Colors } from '../CustomStyles';
+
+const styleBox75width = {
+  paddingTop: '125px',
+  maxWidth: '75%',
+  margin: '0 auto',
+  textAlign: 'center',
+  minHeight: '55vh',
+};
+
+const PortfolioButton = styled(Button)({
+  marginTop: '20px',
+  width: '250px',
+});
 
 const data = {
   adresa: {

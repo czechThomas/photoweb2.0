@@ -2,7 +2,14 @@ import { useEffect } from 'react';
 import { Box } from "@mui/material";
 import MinorHeader from '../components/Header/MinorHeader';
 import TaCText from '../components/ContactForm/TaCText';
-import { styleBox75width } from '../CustomStyles';
+
+const styleBox75width = {
+    paddingTop: '125px',
+    maxWidth: '75%',
+    margin: '0 auto',
+    textAlign: 'center',
+    minHeight: '55vh',
+};
 
 const TermsAndConditions = () => {
   useEffect(() => {

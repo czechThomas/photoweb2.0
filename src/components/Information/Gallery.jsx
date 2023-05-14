@@ -1,6 +1,10 @@
 import './Gallery.css';
-import { Box, styled } from '@mui/material';
-import { PortfolioButton } from '../../CustomStyles';
+import { Box, Button, styled } from '@mui/material';
+
+const PortfolioButton = styled(Button)({
+  marginTop: '20px',
+  width: '250px',
+});
 
 const GalleryBox = styled(Box)({
     display: 'flex',
@@ -9,25 +13,25 @@ const GalleryBox = styled(Box)({
     justifyContent: 'center',
     gap: '30px',
     paddingTop: '50px',
-  })  
+ }); 
 
 const Gallery = ({ type }) => {
 
   const pictureData = {
     svatby: [
-      '/images/svatba/DSC_4128-Edit.jpg',
-      '/images/svatba/DSC_8717.jpg',
-      '/images/svatba/DSC_6444-Edit.jpg'
+      '/images/wedding/8.jpg',
+      '/images/wedding/20.jpg',
+      '/images/wedding/21.jpg'
     ],
     miminka: [
-      '/images/babies/DSC_0119_cb.jpg',
-      '/images/babies/DSC_0760-Edit.jpg',
-      '/images/babies/DSC_0030.jpg',
+      '/images/babies/2.jpg',
+      '/images/babies/3.jpg',
+      '/images/babies/8.jpg',
     ],
     detiarodinky: [
-      '/images/kids/DSC_6371.jpg',
-      '/images/kids/DSC_8461.jpg',
-      '/images/kids/DSC_8773_cb.jpg',
+      '/images/kidsAndFamily/2.jpg',
+      '/images/kidsAndFamily/3.jpg',
+      '/images/kidsAndFamily/4.jpg',
     ],
   };
   

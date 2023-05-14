@@ -12,6 +12,8 @@ const GalleryStyle = {
   gap: '10px',
   alignItems: 'center',
   justifyContent: 'center',
+  maxWidth: '90%',
+  margin: '0 auto',
 };
 
 const navigateIcon = {
@@ -69,7 +71,7 @@ const PortfolioGallery = ({ itemData }) => {
         <>
         <div className="sliderWrap" onClick={handleCloseModal}>
           <div className="fullScreenImage">
-            <img src={itemData[slideNumber].img} alt=''/>
+            <img src={itemData[slideNumber].img} alt={itemData[slideNumber].title}/>
           </div>
         </div>
         <NavigateBeforeIcon sx={navigateIcon} onClick={prevImage} className="prevSlide" />

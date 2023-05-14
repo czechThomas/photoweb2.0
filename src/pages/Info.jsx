@@ -1,4 +1,4 @@
-import { Box } from '@mui/material';
+import { Box, styled } from '@mui/material';
 import { useEffect } from 'react';
 import { useSearchParams, useLocation } from 'react-router-dom';
 import GalleryBox from '../components/Information/Gallery';
@@ -6,7 +6,14 @@ import ButtonGoup from '../components/Information/ButtonGoup';
 import Miminka from '../pages/Miminka';
 import Svatby from '../pages/Svatby';
 import Deti from '../pages/Deti';
-import { styleBox } from '../CustomStyles';
+
+const InfoBox = styled(Box)({
+  paddingTop: '125px',
+  maxWidth: '90%',
+  margin: '0 auto',
+  textAlign: 'center',
+  minHeight: '55vh',
+});
 
 
 const Info = () => {
@@ -20,7 +27,7 @@ const Info = () => {
 
   return(
     <>
-      <Box sx={styleBox}>
+      <InfoBox>
         <ButtonGoup type={type} setType={setSearchParams} />
         {(() => {
         switch (type) {
@@ -35,7 +42,7 @@ const Info = () => {
         }
       })()}
       <GalleryBox type={type} />
-      </Box>
+      </InfoBox>
     </>
   );
 };

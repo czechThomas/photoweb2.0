@@ -1,6 +1,14 @@
-import { Box, Typography, Avatar } from '@mui/material';
-import { BannerBox } from '../../CustomStyles';
+import { Box, Typography, Avatar, styled } from '@mui/material';
 import { useWindow } from '../../Context';
+
+const BannerBox = styled(Box)({
+    display: 'flex',
+    flexWrap: 'wrap',
+    gap: '30px',
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingBottom: '50px',
+});
 
 const Banner = () => {
     const { windowSize } = useWindow();

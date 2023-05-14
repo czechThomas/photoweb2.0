@@ -3,15 +3,13 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import { useWindow } from '../../Context';
 
-
-
 const PortfolioTypography = styled(Typography)({
     fontStyle: 'oblique', 
     fontWeight: 'bold', 
     fontSize: '300%',
     textShadow: '1px 2px 1px grey',
     color: 'white',
-})
+});
 
 const PortfolioButton = ({ image, title, path }) => {
   const { windowSize } = useWindow();
@@ -24,11 +22,12 @@ const PortfolioButton = ({ image, title, path }) => {
     backgroundImage: `url(/images/${image})`,
     backgroundSize: 'contain',
     backgroundRepeat: 'no-repeat',
+    borderRadius: '0px',
     filter: 'grayscale(100%)',
     '&:hover': {
         filter: 'none',
     }
-});
+  });
 
   if (windowSize >= 1050) {
     return (

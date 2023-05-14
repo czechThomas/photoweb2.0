@@ -3,8 +3,14 @@ import DividerText from '../components/Divider/Divider';
 import PortfolioItem from '../components/PortfolioComponents/PorfolioItem';
 import Banner from '../components/Banner/Banner';
 import ContactForm from '../components/ContactForm/ContactForm';
-import { Box } from '@mui/material';
-import { styleBox35padding } from '../CustomStyles';
+import { Box, styled } from '@mui/material';
+
+const Box35padding = styled(Box)({
+  paddingTop: '35px',
+  maxWidth: '90%',
+  margin: '0 auto',
+  textAlign: 'center',
+});
 
 const text = {
   svatby: 
@@ -21,40 +27,40 @@ const HomePage = () => {
       <Header minHeight="750px" />
       <Banner />
       <DividerText message="co fotím" />
-      <Box sx={styleBox35padding}>
+      <Box35padding>
         <PortfolioItem 
           direction="" 
           name="svatby"
           type="svatby"
-          image="/images/svatba/svatba_uvod_fit.jpg" 
+          image="/images/homePageImages/1.jpg" 
           text={text.svatby}
         />
         <PortfolioItem 
           direction="row-reverse" 
           name="miminka"
           type="miminka"
-          image="/images/babies/miminka_uvod.jpg" 
+          image="/images/homePageImages/3.jpg" 
           text={text.miminka}
         />
         <PortfolioItem 
           direction="" 
           name="děti"
           type="detiarodinky"
-          image="/images/kids/Deti_uvod.jpg" 
+          image="/images/homePageImages/2.jpg" 
           text={text.deti}
         />
         <PortfolioItem 
           direction="row-reverse" 
           name="rodinky"
           type="detiarodinky"
-          image="/images/rodinky/rodinky_uvod.jpg" 
+          image="/images/homePageImages/4.jpg" 
           text={text.rodinky}
         />
-      </Box>
+      </Box35padding>
       <DividerText message="kontakt" />
-      <Box sx={styleBox35padding}>
+      <Box35padding>
         <ContactForm />
-      </Box>
+      </Box35padding>
     </>
   );
 }
